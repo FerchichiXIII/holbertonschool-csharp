@@ -1,0 +1,15 @@
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\bin\Debug\net6.0\6-print_string.exe
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\bin\Debug\net6.0\6-print_string.deps.json
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\bin\Debug\net6.0\6-print_string.runtimeconfig.json
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\bin\Debug\net6.0\6-print_string.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\bin\Debug\net6.0\6-print_string.pdb
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.csproj.AssemblyReference.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.AssemblyInfoInputs.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.AssemblyInfo.cs
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.csproj.CoreCompileInputs.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\refint\6-print_string.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.pdb
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\6-print_string.genruntimeconfig.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\6-print_string\obj\Debug\net6.0\ref\6-print_string.dll
