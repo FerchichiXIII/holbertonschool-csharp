@@ -1,0 +1,15 @@
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.csproj.AssemblyReference.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.AssemblyInfoInputs.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.AssemblyInfo.cs
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.csproj.CoreCompileInputs.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\bin\Debug\net6.0\4-print_integer.exe
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\bin\Debug\net6.0\4-print_integer.deps.json
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\bin\Debug\net6.0\4-print_integer.runtimeconfig.json
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\bin\Debug\net6.0\4-print_integer.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\bin\Debug\net6.0\4-print_integer.pdb
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\refint\4-print_integer.dll
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.pdb
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\4-print_integer.genruntimeconfig.cache
+C:\Users\anasf\holberton\holbertonschool-csharp\0x00-csharp-hello_world\4-print_integer\obj\Debug\net6.0\ref\4-print_integer.dll
