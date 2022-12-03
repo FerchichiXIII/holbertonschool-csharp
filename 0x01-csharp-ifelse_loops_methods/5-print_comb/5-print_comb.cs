@@ -16,7 +16,7 @@ namespace _5_print_comb
                     }
                     else
                     {
-                        Console.Write ("{0:00}",n);
+                        Console.Write ("{0:00}\n",n);
                     }
                     n++;
                 }
