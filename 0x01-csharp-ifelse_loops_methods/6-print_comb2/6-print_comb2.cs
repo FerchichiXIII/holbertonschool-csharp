@@ -9,11 +9,11 @@ namespace _5_print_comb
             int n = 0;
             while (n <= 99)
                 {
-                    int a = n%10;
+                    int a = n % 10;
                     int b = n / 10;
                     if (a != b && a > b)
                 {
-                        if (n != 98)
+                    if (n != 89)
                         {
                             Console.Write ("{0:00}, ",n);
 
