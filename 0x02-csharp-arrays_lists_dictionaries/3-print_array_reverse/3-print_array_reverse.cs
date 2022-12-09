@@ -7,15 +7,19 @@ class Array
     {
         if(array == null || array.Length == 0 )
         {
-            Console.Write("\n");
+            Console.WriteLine();
         }
         else
         {
             for (int i = array.Length -1; i >=0; i--)
             {
-                Console.Write("{0} ",array[i]);
+                Console.Write(array[i]);
+                if (i > 0)
+                {
+                    Console.Write(" ");
+                }
             }
         }
-        Console.Write("\n");
+        Console.WriteLine();
     }
 }
