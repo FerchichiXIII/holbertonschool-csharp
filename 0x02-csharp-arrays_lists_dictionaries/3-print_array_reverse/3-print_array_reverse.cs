@@ -1,25 +1,27 @@
 ﻿using System;
 
-
 class Array
 {
     public static void Reverse(int[] array)
     {
-        if(array == null )
+        if (array == null)
         {
             Console.WriteLine();
+            return;
         }
-        else
+        if (array.Length > 0)
         {
             for (int i = array.Length - 1; i > -1; i--)
             {
-                Console.Write(array[i]);
                 if (i > 0)
-                {
-                    Console.Write(" ");
-                }
+                    Console.Write($"{array[i]} ");
+                else
+                    Console.WriteLine($"{array[i]}");
             }
         }
-        Console.WriteLine();
+        else
+        {
+            Console.WriteLine();
+        }
     }
 }
