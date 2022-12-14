@@ -3,9 +3,9 @@ using Enemies;
 
 namespace Enemies
 {
-    class Zombie
+    class Enemies
     {
-        public class Enemies
+        public class Zombie
         {
         }
     }
