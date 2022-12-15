@@ -20,7 +20,9 @@ namespace Enemies
         }
         public Zombie(int value)
         {
-            /// <summary> a new public constructor: public Zombie(int value)</summary>
+            /// <summary>
+            /// a new public constructor: public Zombie(int value)
+            /// </summary>
             health = value;
             if (value < 0)
             {
