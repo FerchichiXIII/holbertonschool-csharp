@@ -6,5 +6,4 @@
     <RootNamespace>_2_enemy</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-
 </Project>
