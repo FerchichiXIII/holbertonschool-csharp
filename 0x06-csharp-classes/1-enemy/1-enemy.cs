@@ -2,15 +2,12 @@
 
 namespace Enemies
 {
-    class Zombie
+    public class Zombie
     {
-        public class Enemies
+        public int health;
+        public Zombie()
         {
-            public int health;
-            public Zombie()
-            {
-                health = 0;
-            }
+            health = 0;
         }
     }
 }
