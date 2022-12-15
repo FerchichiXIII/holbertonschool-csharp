@@ -18,13 +18,16 @@ namespace Enemies
         }
         public Zombie(int value)
         /// <summary>
-        /// a new public constructor: public Zombie(int value)
+        /// a new public constructor: public Zombie(int value) ///
         /// </summary>
         {
-            health = value;
             if (value < 0)
             {
                 throw new ArgumentException ("Health must be greater than or equal to 0");
+            }
+            else
+            {
+                health = value;
             }
         }
     }
