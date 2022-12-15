@@ -14,14 +14,13 @@ namespace Enemies
         /// <summary> int health </summary>
         public Zombie()
         {
-            /// <summary>public zombie</summary>
             health = 0;
         }
         public Zombie(int value)
+        /// <summary>
+        /// a new public constructor: public Zombie(int value)
+        /// </summary>
         {
-            /// <summary>
-            /// a new public constructor: public Zombie(int value)
-            /// </summary>
             health = value;
             if (value < 0)
             {
