@@ -18,8 +18,8 @@ namespace Enemies
         }
         public Zombie(int value)
         {
-            /// <summary> public Zombie </summary>
-            if (value <= 0)
+
+            if (value < 0)
             {
                 throw new ArgumentException ("Health must be greater than or equal to 0");
             }
