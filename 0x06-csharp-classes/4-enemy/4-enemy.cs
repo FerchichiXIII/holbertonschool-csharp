@@ -12,7 +12,7 @@ namespace Enemies
         /// </summary>
         public int health;
         /// <summary> int health </summary>
-        private string Name = "(No name)";
+        private string name = "(No name)";
         /// <summary>prv str name</summary>
         public string Name
         {
