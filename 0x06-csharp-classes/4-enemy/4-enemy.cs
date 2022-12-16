@@ -16,7 +16,9 @@ namespace Enemies
         /// <summary>prv str name</summary>
         public string Name
         {
+            ///<summary> get methode </summary>
             get { return name; }
+            /// <summary> set methode </summary>
             set { name = value; }
         }
         public Zombie()
