@@ -16,13 +16,16 @@ namespace Enemies
         /// <summary>prv str name</summary>
         public string Name
         {
-            get {
+            get 
+            {
                 return name;
-                }
-            set {
+            }
+            set 
+            {
                 name = value;
-                }
+            }
         }
+        /// <summary>Get and Set</summary>
         public Zombie()
         {
             health = 0;
