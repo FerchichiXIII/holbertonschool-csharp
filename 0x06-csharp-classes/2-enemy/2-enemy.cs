@@ -16,6 +16,7 @@ namespace Enemies
         {
             health = 0;
         }
+        /// <summary> new instance </summary>
         public Zombie(int value)
         {
 
