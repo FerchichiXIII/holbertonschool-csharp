@@ -17,8 +17,8 @@ struct Dog
         owner = _owner;
         rating = _rating;
     }
-    public override string ToString()
+    public override string ToString ()
     {
-        return $"Dog Name: {name}\nAge: {age}\nOwner: {owner}\nRatng: {rating}";
+        return string.Format("Dog Name: {0}\nAge: {1}\nOwner: {2}\nRatng: {3}", name, age, owner, rating);
     }
 }
