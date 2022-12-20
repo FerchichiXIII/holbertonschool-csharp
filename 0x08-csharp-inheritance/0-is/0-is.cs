@@ -13,10 +13,7 @@
                 /// <summary> if obj is int return true </summary>
                 return true;
             }
-            else
-            {
-                /// <summary> if obj is not int return false </summary>
                 return false;
-            }
         }
+  
     }
