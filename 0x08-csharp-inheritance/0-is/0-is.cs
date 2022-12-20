@@ -1,4 +1,5 @@
 ﻿using System;
+
     class Obj
     {
         public static bool IsOfTypeInt(object obj)
