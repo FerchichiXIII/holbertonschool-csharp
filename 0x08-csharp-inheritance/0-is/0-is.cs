@@ -10,10 +10,9 @@
             /// </summary>
             if (obj is int)
             {
-                /// <summary> if obj is int return true </summary>
                 return true;
             }
-                return false;
+            return false;
         }
   
     }
