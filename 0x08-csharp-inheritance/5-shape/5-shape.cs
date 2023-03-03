@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// Class: Shape
+/// <summary>
 
 public class Shape
 {
