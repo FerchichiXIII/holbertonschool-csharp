@@ -1,14 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
-/// <summary>
-/// Class: Shape
-/// <summary>
-
-public class Shape
+///<summary>class Shape</summary>
+class Shape
 {
+    ///<summary>Throws an NotImplementedException</summary>
     public virtual int Area()
     {
-        ///<summary>Throws an NotImplementedException</summary>
-        throw new NotImplementedException("Area() is not implemented");
+       throw new NotImplementedException("Area() is not implemented");
     }
 }
