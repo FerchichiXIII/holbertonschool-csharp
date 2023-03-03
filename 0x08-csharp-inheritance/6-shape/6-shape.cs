@@ -16,7 +16,7 @@ class Rectangle : Shape
     private int width;
     private int height;
     ///<summary>with set and get</summary>
-    public int width
+    public int Width
     {
         get
         {
