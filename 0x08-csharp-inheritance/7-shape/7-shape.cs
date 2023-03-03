@@ -47,12 +47,13 @@ class Rectangle : Shape
             height = value;
         }
     }
+    ///<summary>new area</summary>
     public new int Area()
     {
         return height * width;
     }
     public override string ToString()
     {
-        return String.Format ("[Rectangle] {0} / {1}", height / width);
+        return String.Format ("[Rectangle] {0} / {1}", height , width);
     }
 }
