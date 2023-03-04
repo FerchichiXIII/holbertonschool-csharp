@@ -14,9 +14,10 @@ public class List
         List<int> list = new List<int>();
         for (int i = 0; i < size; i++)
         {
+            Console.Write("{0}{1}",i , i != size-1 ? " ":"");
             list.Add(i);
         }
-        Console.WriteLine(string.Join(", ", list));
+        Console.WriteLine();
 
         return list;
     }
