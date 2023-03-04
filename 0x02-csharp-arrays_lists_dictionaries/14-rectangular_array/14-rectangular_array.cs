@@ -1,28 +1,31 @@
 ﻿using System;
 
-public class Program
+namespace _14_rectangular_array
 {
-    public static void Main()
+    class Program
     {
-        int[,] array = new int[5, 5];
-
-        for (int i = 0; i < 5; i++)
+        static void Main(string[] args)
         {
-            for (int j = 0; j < 5; j++)
+            int[,] array = new int[5, 5];
+
+            for (int i = 0; i < 5; i++)
             {
-                if (i == 2 && j == 2)
+                for (int j = 0; j < 5; j++)
                 {
-                    array[i, j] = 1;
-                }
-                else
-                {
-                    array[i, j] = 0;
+                    if (i == 2 && j == 2)
+                    {
+                        array[i, j] = 1;
+                    }
+                    else
+                    {
+                        array[i, j] = 0;
+                    }
+
+                    Console.Write(array[i, j] + " ");
                 }
 
-                Console.Write(array[i, j] + " ");
+                Console.WriteLine();
             }
-
-            Console.WriteLine();
         }
     }
 }
