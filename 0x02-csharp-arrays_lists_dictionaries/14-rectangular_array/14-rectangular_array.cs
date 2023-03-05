@@ -5,23 +5,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[,] array = new int[5, 5];
-        for (int i = 0; i < 5; i++)
+        int[,] mat = new int[5, 5];
+                    
+        for (int f = 0; f < 5; f++)
         {
-            for (int j = 0; j < 5; j++)
-            {
-                if (i == 2 && j == 2)
-                {
-                    array[i, j] = 1;
-                }
-                else
-                {
-                    array[i, j] = 0;
-                }
-                Console.Write(array[i, j] + " ");
-            }
+            for (int c = 0; c < 5; c++)
+                    mat[f, c] = 0;
+        }
+        mat[2,2] = 1;
+        for (int f = 0; f < 5; f++)
+        {
+            for (int c = 0; c < 5; c++)
+                    Console.Write("{0}{1}", mat[f,c], c < 4 ? " ": "");
             Console.WriteLine();
         }
     }
 }
-
