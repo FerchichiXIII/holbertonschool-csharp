@@ -2,9 +2,9 @@
 
 class Queue<T>
 {
-  
-    public Type CheckType()
+
+    public string CheckType()
     {
-        return typeof(T);
+        return typeof(T).ToString();
     }
 }
