@@ -43,7 +43,7 @@ class Queue<T>
     public T Dequeue()
     {
         /// <summary>
-        /// method Dequeue that removes the first node in the queue and returns its value.
+        /// method Dequeue
         /// </summary>
         if (this.head == null)
         {
