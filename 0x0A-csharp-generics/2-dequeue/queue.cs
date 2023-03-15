@@ -1,6 +1,8 @@
 ﻿using System;
 
 
+
+
 class Queue<T>
 {
     int count;
@@ -40,6 +42,9 @@ class Queue<T>
     }
     public T Dequeue()
     {
+        /// <summary>
+        /// method Dequeue that removes the first node in the queue and returns its value.
+        /// </summary>
         if (this.head == null)
         {
             Console.WriteLine("Queue is empty");
