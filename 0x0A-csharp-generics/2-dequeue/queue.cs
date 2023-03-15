@@ -1,8 +1,5 @@
 ﻿using System;
 
-
-
-
 class Queue<T>
 {
     int count;
@@ -48,12 +45,12 @@ class Queue<T>
         if (this.head == null)
         {
             Console.WriteLine("Queue is empty");
-            return (default(T));
+            return default(T);
         }
         Node n= this.head;
         this.head = this.head.Next;
         count -= 1;
-        return (n.Value);
+        return n.Value;
 
     }
 
