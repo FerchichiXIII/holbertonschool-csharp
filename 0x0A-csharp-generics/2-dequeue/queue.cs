@@ -2,27 +2,42 @@
 
 class Queue<T>
 {
+    /// <summary>
+    /// Queue Class
+    /// </summary>
     int count;
 
     public Node head
     {
+        /// <summary>
+        /// Node head
+        /// </summary>
         get;
         set;
     }
 
     public Node tail
     {
+        ///<summary>
+        ///node tail
+        /// </summary>
         get;
         set;
     }
 
     public string CheckType()
     {
+        /// <summary>
+        /// check the type
+        /// </summary>
         return (typeof(T).ToString());
     }
 
     public void Enqueue(T value)
     {
+        /// <summary>
+        /// Enqueue
+        /// </summary>
         Node newNode = new Node(value);
         if (this.tail == null)
         {
@@ -56,6 +71,9 @@ class Queue<T>
 
     public int Count()
     {
+        /// <summary>
+        /// count
+        /// </summary>
         return this.count;
     }
     
@@ -63,11 +81,17 @@ class Queue<T>
 
     public class Node
     {
+        /// <summary>
+        /// class Node
+        /// </summary>
         T value;
         Node next = null;
 
         public T Value
         {
+            /// <summary>
+            /// value of T
+            /// </summary>
             get => this.value;
             set
             {
@@ -76,6 +100,9 @@ class Queue<T>
         }
         public Node Next
         {
+            /// <summary>
+            /// node next
+            /// </summary>
             get => this.next;
             set
             {
@@ -85,6 +112,9 @@ class Queue<T>
 
         public Node(T value)
         {
+            /// <summery>
+            /// node of T value
+            /// </summery>
             this.value = value;
             this.next = null;
         }
