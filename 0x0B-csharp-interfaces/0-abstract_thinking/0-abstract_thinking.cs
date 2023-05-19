@@ -1,6 +1,10 @@
 ﻿
 using System;
 
+/// <summary>
+/// Class Base
+/// </summary>
+
 abstract class Base
 {
     public string name { get; set; }
