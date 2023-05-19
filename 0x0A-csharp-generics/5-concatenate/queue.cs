@@ -3,68 +3,68 @@
 class Queue<T>
 {
     int count;
+    Node head;
+    Node tail;
 
-    public Node head
+    public Queue()
     {
-        get;
-        set;
-    }
-
-    public Node tail
-    {
-        get;
-        set;
-    }
-
-    public string CheckType()
-    {
-        return (typeof(T).ToString());
+        this.count = 0;
+        this.head = null;
+        this.tail = null;
     }
 
     public void Enqueue(T value)
     {
+        if (value == null)
+        {
+            throw new ArgumentNullException("value");
+        }
+
         Node newNode = new Node(value);
         if (this.tail == null)
         {
             this.head = this.tail = newNode;
-            count += 1;
         }
         else
         {
             this.tail.Next = newNode;
             this.tail = newNode;
-            count += 1;
         }
 
+        this.count++;
     }
+
     public T Dequeue()
     {
         if (this.head == null)
         {
-            Console.WriteLine("Queue is empty");
-            return default(T);
+            throw new InvalidOperationException("Queue is empty");
         }
+
         Node n = this.head;
         this.head = this.head.Next;
-        count -= 1;
+        this.count--;
         return n.Value;
-
     }
+
     public T Peek()
     {
         if (this.head == null)
         {
-            Console.WriteLine("Queue is empty");
-            return default(T);
+            throw new InvalidOperationException("Queue is empty");
         }
+
         return this.head.Value;
     }
+
     public void Print()
     {
         if (this.head == null)
         {
             Console.WriteLine("Queue is empty");
+            return;
         }
+
         Node print = this.head;
         while (print != null)
         {
@@ -72,31 +72,27 @@ class Queue<T>
             print = print.Next;
         }
     }
+
     public string Concatenate()
     {
         if (this.head == null)
         {
-            Console.WriteLine("Queue is empty");
+            return "";
         }
-        if (typeof(T) != typeof(string) || typeof(T) != typeof(char))
-        {
-            Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
-        }
-        Node node = this.head;
-        string str = "";
-        while(node != null)
-        {
-            if (node.next == null)
-            {
-                str += prop.value;
 
-            }
-            else
-            {
-                str += node.Value + " ";
-            }
+        if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
+        {
+            throw new InvalidOperationException("Concatenate() is for a queue of Strings or Chars only.");
+        }
+
+        string str = "";
+        Node node = this.head;
+        while (node != null)
+        {
+            str += node.Value + " ";
             node = node.Next;
         }
+
         return str;
     }
 
