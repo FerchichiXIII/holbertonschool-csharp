@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 /// <summary>
 /// Class Base
@@ -7,6 +6,9 @@ using System;
 
 abstract class Base
 {
+    /// <summary>
+    /// The name of the object.
+    /// </summary>
     public string name { get; set; }
 
     public override string ToString()
