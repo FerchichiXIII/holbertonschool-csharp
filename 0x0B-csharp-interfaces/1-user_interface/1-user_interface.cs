@@ -16,6 +16,7 @@ abstract class Base
         return $"{this.name} is a {this.GetType()}";
     }
 }
+
 public interface IInteractive
 {
     void Interact();
@@ -23,53 +24,30 @@ public interface IInteractive
 
 public interface IBreakable
 {
-    
-    int durability
-    {
-        get;
-        set; 
-    }
+    int durability { get; set; }
     void Break();
 }
 
 public interface ICollectable
 {
-    
-
-    bool isCollected
-    {
-        get;
-        set;
-    }
-
+    bool isCollected { get; set; }
     void Collect();
-
 }
 
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    public int durability
-    {
-        get;
-        set;
-    }
-
-    public bool isCollected
-    {
-        get;
-        set;
-    }
+    public int durability { get; set; }
+    public bool isCollected { get; set; }
 
     public void Interact()
     {
-
     }
+
     public void Break()
     {
-
     }
-    public void collect()
-    { 
-    
+
+    public void Collect()
+    {
     }
 }
