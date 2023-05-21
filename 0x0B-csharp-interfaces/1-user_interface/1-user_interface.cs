@@ -1,126 +1,90 @@
 ﻿using System;
-
 /// <summary>
-/// Ineterface Interactive
+/// interface IInteractive
 /// </summary>
 public interface IInteractive
 {
     /// <summary>
-    /// Intercat method
+    /// interact
     /// </summary>
     void Interact();
 }
-
 /// <summary>
-/// Interface Breakable
+/// interface IBreakable
 /// </summary>
 public interface IBreakable
 {
     /// <summary>
-    /// durability integer
+    /// int 
     /// </summary>
-    /// <value>int value</value>
-    int durability
-    {
-        get;
-        set;
-    }
+    int durability { get; set; }
     /// <summary>
-    /// break method
+    /// method
     /// </summary>
     void Break();
 }
-
 /// <summary>
-/// Interface Collectable
+/// interface ICollectable
 /// </summary>
 public interface ICollectable
 {
     /// <summary>
-    /// isCOllected property
+    /// property
     /// </summary>
-    /// <value>Bool value</value>
-    bool isCollected
-    {
-        get;
-        set;
-    }
+    bool isCollected { get; set; }
     /// <summary>
-    /// Collect method
+    /// method
     /// </summary>
     void Collect();
 }
 /// <summary>
-/// Class Base
+/// obstract class
 /// </summary>
 public abstract class Base
 {
     /// <summary>
-    /// Name property
+    /// string name
     /// </summary>
-    /// <value>string value</value>
-    private string name
-    {
-        get;
-        set;
-    }
+    public string name { get; set; }
     /// <summary>
-    /// Override tostring() method
+    /// Overide ToString Method
     /// </summary>
-    /// <returns>string</returns>
-
     public override string ToString()
     {
-        return ($"{this.name} is a {this.GetType()}");
+        return ($"{name} is a {this.GetType()}");
     }
 }
-
-
 /// <summary>
-/// Test object class
+/// test object class inherit from interfaces and obstact class
 /// </summary>
 public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-
     /// <summary>
-    /// durability property
+    /// property 
     /// </summary>
-    /// <value>int value</value>
-    public int durability
-    {
-        get;
-        set;
-    }
+    public int durability { get; set; }
     /// <summary>
     /// isCollected
     /// </summary>
-    /// <value>bool value</value>
-    public bool isCollected
-    {
-        get;
-        set;
-    }
-
+    public bool isCollected { get; set; }
     /// <summary>
-    /// Interact inmplementation
-    /// </summary>
-    public void Interact()
-    {
-
-    }
-
-    /// <summary>
-    /// Break implementation
+    /// Break
     /// </summary>
     public void Break()
     {
 
     }
-
     /// <summary>
-    /// COllect implementation
+    /// Collect
     /// </summary>
     public void Collect()
+    {
+
+    }
+    /// <summary>
+    /// Interact
+    /// </summary>
+    public void Interact()
     {
 
     }
