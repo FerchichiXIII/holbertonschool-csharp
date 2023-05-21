@@ -1,21 +1,21 @@
 ﻿using System;
 /// <summary>
-/// Base class
+/// Class Base
 /// </summary>
 public abstract class Base
 {
     /// <summary>
-    /// Name property
+    /// The name of the object.
     /// </summary>
-    /// <value>string value</value>
-    private string name {
+    private string name
+    {
         get;
         set;
     }
     /// <summary>
     /// Override tostring() method
     /// </summary>
-
+    /// <returns>string</returns>
 
     public override string ToString()
     {
@@ -26,7 +26,8 @@ public abstract class Base
 /// <summary>
 /// Ineterface Interactive
 /// </summary>
-public interface IInteractive {
+public interface IInteractive
+{
     /// <summary>
     /// Intercat method
     /// </summary>
@@ -36,29 +37,34 @@ public interface IInteractive {
 /// <summary>
 /// Interface Breakable
 /// </summary>
-public interface IBreakable {
+public interface IBreakable
+{
     /// <summary>
     /// durability integer
     /// </summary>
-    int durability {
+    /// <value>int value</value>
+    int durability
+    {
         get;
         set;
     }
     /// <summary>
     /// break method
     /// </summary>
-    void Break();   
+    void Break();
 }
 
 /// <summary>
 /// Interface Collectable
 /// </summary>
-public interface ICollectable {
+public interface ICollectable
+{
     /// <summary>
     /// isCOllected property
     /// </summary>
-
-    bool isCollected {
+    /// <value>Bool value</value>
+    bool isCollected
+    {
         get;
         set;
     }
@@ -71,20 +77,24 @@ public interface ICollectable {
 /// <summary>
 /// Test object class
 /// </summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable {
+public class TestObject : Base, IInteractive, IBreakable, ICollectable
+{
 
     /// <summary>
     /// durability property
     /// </summary>
-
-    public int durability {
+    /// <value>int value</value>
+    public int durability
+    {
         get;
         set;
     }
     /// <summary>
     /// isCollected
     /// </summary>
-    public bool isCollected {
+    /// <value>bool value</value>
+    public bool isCollected
+    {
         get;
         set;
     }
