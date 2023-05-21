@@ -1,22 +1,27 @@
 ﻿using System;
-
 /// <summary>
-/// Class Base
+/// Base class
 /// </summary>
-
 public abstract class Base
 {
     /// <summary>
-    /// The name of the object.
+    /// Name property
     /// </summary>
-    public string name { get; set; }
+    /// <value>string value</value>
+    private string name {
+        get;
+        set;
+    }
+    /// <summary>
+    /// Override tostring() method
+    /// </summary>
+
 
     public override string ToString()
     {
-        return $"{this.name} is a {this.GetType()}";
+        return ($"{this.name} is a {this.GetType()}");
     }
 }
-
 
 /// <summary>
 /// Ineterface Interactive
