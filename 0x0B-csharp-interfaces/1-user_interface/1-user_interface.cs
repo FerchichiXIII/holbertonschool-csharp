@@ -1,27 +1,4 @@
 ﻿using System;
-/// <summary>
-/// Class Base
-/// </summary>
-public abstract class Base
-{
-    /// <summary>
-    /// The name of the object.
-    /// </summary>
-    private string name
-    {
-        get;
-        set;
-    }
-    /// <summary>
-    /// Override tostring() method
-    /// </summary>
-    /// <returns>string</returns>
-
-    public override string ToString()
-    {
-        return ($"{this.name} is a {this.GetType()}");
-    }
-}
 
 /// <summary>
 /// Ineterface Interactive
@@ -73,6 +50,31 @@ public interface ICollectable
     /// </summary>
     void Collect();
 }
+/// <summary>
+/// Class Base
+/// </summary>
+public abstract class Base
+{
+    /// <summary>
+    /// Name property
+    /// </summary>
+    /// <value>string value</value>
+    private string name
+    {
+        get;
+        set;
+    }
+    /// <summary>
+    /// Override tostring() method
+    /// </summary>
+    /// <returns>string</returns>
+
+    public override string ToString()
+    {
+        return ($"{this.name} is a {this.GetType()}");
+    }
+}
+
 
 /// <summary>
 /// Test object class
