@@ -61,12 +61,12 @@ public class Door : Base, IInteractive
 {
 
 
-    public Door(string name ="Door")
+    public Door(string Name ="Door")
     {
         /// <summery>
         /// String Door
         /// </summery>
-        this.name = name;
+        this.name = Name;
     }
 
     public void Interact()
