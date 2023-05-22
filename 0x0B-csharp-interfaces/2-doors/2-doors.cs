@@ -54,23 +54,37 @@ public abstract class Base
         return ($"{name} is a {this.GetType()}");
     }
 }
-
+/// <summery>
+/// Class Door
+/// </summery>
 public class Door : Base, IInteractive
 {
+    /// <summery>
+    /// String Name
+    /// </summery>
     public string name { get; set; }
 
     public Door()
     {
+        /// <summery>
+        /// Door name
+        /// </summery>
         name = "Door";
     }
 
     public Door(string name)
     {
+        /// <summery>
+        /// String Door
+        /// </summery>
         this.name = name;
     }
 
     public void Interact()
     {
+        /// <summery>
+        /// Interact
+        /// </summery>
         Console.WriteLine($"You try to open the {name}. It's locked.");
     }
 }
