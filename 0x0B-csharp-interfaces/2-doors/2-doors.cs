@@ -59,20 +59,9 @@ public abstract class Base
 /// </summery>
 public class Door : Base, IInteractive
 {
-    /// <summery>
-    /// String Name
-    /// </summery>
-    public string name { get; set; }
 
-    public Door()
-    {
-        /// <summery>
-        /// Door name
-        /// </summery>
-        name = "Door";
-    }
 
-    public Door(string name)
+    public Door(string name ="Door")
     {
         /// <summery>
         /// String Door
