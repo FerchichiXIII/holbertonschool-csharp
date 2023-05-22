@@ -34,7 +34,7 @@ public interface ICollectable
     bool isCollected { get; set; }
     /// <summary>
     /// method
-    /// </summary>
+    /// </summary>  
     void Collect();
 }
 /// <summary>
@@ -59,6 +59,10 @@ public class Door : Base, IInteractive
 {
     public string name { get; set; }
 
+    public Door()
+    {
+        name = "Door";
+    }
 
     public Door(string name)
     {
