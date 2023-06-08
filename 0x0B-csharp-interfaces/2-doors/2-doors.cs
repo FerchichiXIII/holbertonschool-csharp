@@ -57,17 +57,23 @@ public abstract class Base
 /// <summery>
 /// Class Door
 /// </summery>
-public class Door : Base, IInteractive
-{
+public class Door : Base, IInteractive {
 
-
-    public Door(string Name ="Door")
+    /// <summary>
+    /// COnstructor of Door
+    /// </summary>
+    /// <param name="name"></param>
+    public Door(string name="Door")
     {
-        this.name = Name;
+        this.name = name;
     }
 
+    /// <summary>
+    /// Interact implementation
+    /// </summary>
     public void Interact()
     {
-        Console.WriteLine($"You try to open the {name}. It's locked.");
+        Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
+
 }
