@@ -63,17 +63,11 @@ public class Door : Base, IInteractive
 
     public Door(string Name ="Door")
     {
-        /// <summery>
-        /// String Door
-        /// </summery>
         this.name = Name;
     }
 
     public void Interact()
     {
-        /// <summery>
-        /// Interact
-        /// </summery>
         Console.WriteLine($"You try to open the {name}. It's locked.");
     }
 }
