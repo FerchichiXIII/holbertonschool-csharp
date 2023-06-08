@@ -215,30 +215,42 @@ public class RoomObjects
     }
 }
 
+
 /// <summary>
-/// Generic class Objs<T> that creates a collection of type T objects that can be iterated through using foreach.
+/// Generic class Objs
 /// </summary>
+/// <typeparam name="T">Type parameter</typeparam>
 public class Objs<T> : IEnumerable<T>
 {
-    private List<T> objects;
+    /// <summary>
+    /// Internal list to store objects
+    /// </summary>
+    private List<T> objects = new List<T>();
 
-    public Objs()
-    {
-        objects = new List<T>();
-    }
-
+    /// <summary>
+    /// Add method
+    /// </summary>
+    /// <param name="item">The item to be added</param>
     public void Add(T item)
     {
         objects.Add(item);
     }
 
+    /// <summary>
+    /// Implementation of GetEnumerator method
+    /// </summary>
+    /// <returns>The enumerator object</returns>
     public IEnumerator<T> GetEnumerator()
     {
         return objects.GetEnumerator();
     }
 
+    /// <summary>
+    /// Implementation of GetEnumerator method (non-generic version)
+    /// </summary>
+    /// <returns>The enumerator object</returns>
     IEnumerator IEnumerable.GetEnumerator()
     {
-        return GetEnumerator();
+        return this.GetEnumerator();
     }
 }
