@@ -76,10 +76,21 @@ public class Door : Base, IInteractive {
         Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }
+/// <summary>
+/// Class Decoration
+/// </summary>
 public class Decoration : Base, IInteractive, IBreakable
 {
+    /// <summary> Durabillity property </summary>
+    /// <value> Integer </value>
     public int durability { get; set; }
+    /// <summary> Boolean Value </summary>
+    /// <value> Integer </value>
     public bool isQuestItem { get; set; }
+    /// <summary> Decoration </summary>
+    /// <param name="name"></param>
+    /// <param name="durability"></param>
+    /// <param name="isQuestItem"></param>
 
     public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
