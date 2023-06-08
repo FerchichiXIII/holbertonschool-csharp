@@ -93,6 +93,9 @@ public class Decoration : Base, IInteractive, IBreakable
         this.isQuestItem = isQuestItem;
     }
 
+    /// <summary>
+    /// Implementation of Interact
+    /// </summary>
     public void Interact()
     {
         if (durability <= 0)
@@ -108,7 +111,9 @@ public class Decoration : Base, IInteractive, IBreakable
             Console.WriteLine($"You look at the {name}. Not much to see here.");
         }
     }
-
+    /// <summary>
+    /// Break imp
+    /// </summary>
     public void Break()
     {
         durability --;
