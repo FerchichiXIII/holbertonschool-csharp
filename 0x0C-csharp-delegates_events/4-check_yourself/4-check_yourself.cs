@@ -31,6 +31,11 @@ public class Player
     private string status;
 
     /// <summary>
+    /// Gets the current health of the player.
+    /// </summary>
+    public float CurrentHp => hp;
+
+    /// <summary>
     /// Occurs when the current HP is checked.
     /// </summary>
     public event EventHandler<CurrentHPArgs> HPCheck;
@@ -99,6 +104,9 @@ public class Player
         ValidateHP();
     }
 
+    /// <summary>
+    /// Validates and sets the new value of the Player's hp.
+    /// </summary>
     private void ValidateHP()
     {
         if (this.hp < 0)
@@ -110,35 +118,7 @@ public class Player
             this.hp = this.maxHp;
         }
 
-        HPCheck?.Invoke(this, new CurrentHPArgs(this.hp));
-    }
-
-    private void CheckStatus(object sender, CurrentHPArgs e)
-    {
-        float currentHp = e.CurrentHp;
-
-        if (currentHp == maxHp)
-        {
-            status = $"{this.name} is in perfect health!";
-        }
-        else if (currentHp >= maxHp / 2 && currentHp < maxHp)
-        {
-            status = $"{this.name} is doing well!";
-        }
-        else if (currentHp >= maxHp / 4 && currentHp < maxHp / 2)
-        {
-            status = $"{this.name} isn't doing too great...";
-        }
-        else if (currentHp > 0 && currentHp < maxHp / 4)
-        {
-            status = $"{this.name} needs help!";
-        }
-        else if (currentHp == 0)
-        {
-            status = $"{this.name} is knocked out!";
-        }
-
-        Console.WriteLine(status);
+        HPCheck?.Invoke(this, new CurrentHPArgs(hp));
     }
 
     /// <summary>
@@ -161,11 +141,42 @@ public class Player
                 return baseValue;
         }
     }
+    /// <summary>
+/// Checks the status of the player based on the current HP.
+/// </summary>
+/// <param name="sender">The sender of the event.</param>
+/// <param name="e">The event arguments containing the current HP value.</param>
+private void CheckStatus(object sender, CurrentHPArgs e)
+{
+    if (e.CurrentHp == maxHp)
+    {
+        status = $"{name} is in perfect health!";
+    }
+    else if (e.CurrentHp >= maxHp / 2 && e.CurrentHp < maxHp)
+    {
+        status = $"{name} is doing well!";
+    }
+    else if (e.CurrentHp >= maxHp / 4 && e.CurrentHp < maxHp / 2)
+    {
+        status = $"{name} isn't doing too great...";
+    }
+    else if (e.CurrentHp > 0 && e.CurrentHp < maxHp / 4)
+    {
+        status = $"{name} needs help!";
+    }
+    else if (e.CurrentHp == 0)
+    {
+        status = $"{name} is knocked out!";
+    }
+
+    Console.WriteLine(status);
+}
+
 }
 
 /// <summary>
 /// The modifier values.
-/// </summary>
+/// </summary>  
 public enum Modifier
 {
     /// <summary>
@@ -183,12 +194,5 @@ public enum Modifier
     /// </summary>
     Strong
 }
-
-/// <summary>
-/// Delegate to calculate the modifier.
-/// </summary>
-/// <param name="baseValue">The base value.</param>
-/// <param name="modifier">The modifier.</param>
-/// <returns>The modified value.</returns>
+/// <summary>delegate</summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
