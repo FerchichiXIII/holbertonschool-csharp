@@ -67,6 +67,7 @@ public class Player
 
         this.hp += heal;
         Console.WriteLine($"{this.name} heals {heal} HP!");
+        ValidateHP(this.hp);
     }
     
     /// <summary>
