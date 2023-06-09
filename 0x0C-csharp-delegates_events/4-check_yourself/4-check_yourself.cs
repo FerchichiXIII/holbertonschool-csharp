@@ -1,24 +1,5 @@
 ﻿using System;
-
-/// <summary>
-/// Represents the arguments for the current HP event.
-/// </summary>
-public class CurrentHPArgs : EventArgs
-{
-    /// <summary>
-    /// Gets the current HP value.
-    /// </summary>
-    public float CurrentHp { get; }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="CurrentHPArgs"/> class with the specified HP value.
-    /// </summary>
-    /// <param name="newHp">The new HP value.</param>
-    public CurrentHPArgs(float newHp)
-    {
-        CurrentHp = newHp;
-    }
-}
+using System.Dynamic;
 
 /// <summary>
 /// Represents a player with name, maximum health (maxHp), and current health (hp).
@@ -28,20 +9,9 @@ public class Player
     private string name;
     private float maxHp;
     private float hp;
-    private string status;
 
     /// <summary>
-    /// Gets the current health of the player.
-    /// </summary>
-    public float CurrentHp => hp;
-
-    /// <summary>
-    /// Occurs when the current HP is checked.
-    /// </summary>
-    public event EventHandler<CurrentHPArgs> HPCheck;
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Player"/> class with the specified name and maximum health.
+    /// Initializes a new instance of the <see cref="Player"/> class.
     /// </summary>
     /// <param name="name">The name of the player.</param>
     /// <param name="maxHp">The maximum health of the player.</param>
@@ -60,8 +30,6 @@ public class Player
         }
 
         this.hp = this.maxHp;
-        this.status = $"{this.name} is ready to go!";
-        HPCheck += CheckStatus;
     }
 
     /// <summary>
@@ -117,8 +85,6 @@ public class Player
         {
             this.hp = this.maxHp;
         }
-
-        HPCheck?.Invoke(this, new CurrentHPArgs(hp));
     }
 
     /// <summary>
@@ -141,42 +107,11 @@ public class Player
                 return baseValue;
         }
     }
-    /// <summary>
-/// Checks the status of the player based on the current HP.
-/// </summary>
-/// <param name="sender">The sender of the event.</param>
-/// <param name="e">The event arguments containing the current HP value.</param>
-private void CheckStatus(object sender, CurrentHPArgs e)
-{
-    if (e.CurrentHp == maxHp)
-    {
-        status = $"{name} is in perfect health!";
-    }
-    else if (e.CurrentHp >= maxHp / 2 && e.CurrentHp < maxHp)
-    {
-        status = $"{name} is doing well!";
-    }
-    else if (e.CurrentHp >= maxHp / 4 && e.CurrentHp < maxHp / 2)
-    {
-        status = $"{name} isn't doing too great...";
-    }
-    else if (e.CurrentHp > 0 && e.CurrentHp < maxHp / 4)
-    {
-        status = $"{name} needs help!";
-    }
-    else if (e.CurrentHp == 0)
-    {
-        status = $"{name} is knocked out!";
-    }
-
-    Console.WriteLine(status);
-}
-
 }
 
 /// <summary>
 /// The modifier values.
-/// </summary>  
+/// </summary>
 public enum Modifier
 {
     /// <summary>
@@ -194,5 +129,11 @@ public enum Modifier
     /// </summary>
     Strong
 }
-/// <summary>delegate</summary>
+
+/// <summary>
+/// Delegate to calculate the modifier.
+/// </summary>
+/// <param name="baseValue">The base value.</param>
+/// <param name="modifier">The modifier.</param>
+/// <returns>The modified value.</returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
