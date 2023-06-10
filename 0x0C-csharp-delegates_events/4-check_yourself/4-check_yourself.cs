@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Dynamic;
+
 
 /// <summary>
 /// Represents a player with name, maximum health (maxHp), and current health (hp).
@@ -9,6 +9,12 @@ public class Player
     private string name;
     private float maxHp;
     private float hp;
+    private string status = "Player is ready to go!";
+
+    /// <summary>
+    /// Event triggered when the player's current health is checked.
+    /// </summary>
+    public event EventHandler<CurrentHPArgs> HPCheck;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Player"/> class.
@@ -30,6 +36,8 @@ public class Player
         }
 
         this.hp = this.maxHp;
+
+        HPCheck += CheckStatus;
     }
 
     /// <summary>
@@ -72,9 +80,6 @@ public class Player
         ValidateHP();
     }
 
-    /// <summary>
-    /// Validates and sets the new value of the Player's hp.
-    /// </summary>
     private void ValidateHP()
     {
         if (this.hp < 0)
@@ -85,6 +90,8 @@ public class Player
         {
             this.hp = this.maxHp;
         }
+
+        HPCheck?.Invoke(this, new CurrentHPArgs(this.hp));
     }
 
     /// <summary>
@@ -106,6 +113,34 @@ public class Player
             default:
                 return baseValue;
         }
+    }
+
+    private void CheckStatus(object sender, CurrentHPArgs e)
+    {
+        float currentHp = e.currentHp;
+
+        if (currentHp == maxHp)
+        {
+            status = $"{name} is in perfect health!";
+        }
+        else if (currentHp >= maxHp / 2 && currentHp < maxHp)
+        {
+            status = $"{name} is doing well!";
+        }
+        else if (currentHp >= maxHp / 4 && currentHp < maxHp / 2)
+        {
+            status = $"{name} isn't doing too great...";
+        }
+        else if (currentHp > 0 && currentHp < maxHp / 4)
+        {
+            status = $"{name} needs help!";
+        }
+        else if (currentHp == 0)
+        {
+            status = $"{name} is knocked out!";
+        }
+
+        Console.WriteLine(status);
     }
 }
 
@@ -131,9 +166,21 @@ public enum Modifier
 }
 
 /// <summary>
-/// Delegate to calculate the modifier.
+/// Represents the arguments for the current HP event.
 /// </summary>
-/// <param name="baseValue">The base value.</param>
-/// <param name="modifier">The modifier.</param>
-/// <returns>The modified value.</returns>
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
+public class CurrentHPArgs : EventArgs
+{
+    /// <summary>
+    /// The current HP value.
+    /// </summary>
+    public float currentHp;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CurrentHPArgs"/> class with the specified current HP value.
+    /// </summary>
+    /// <param name="currentHp">The current HP value.</param>
+    public CurrentHPArgs(float currentHp)
+    {
+        this.currentHp = currentHp;
+    }
+}
