@@ -1,0 +1,24 @@
+string storagePath = Path.Combine(Directory.GetCurrentDirectory(),
+"storage");
+JSONStorage storage = new JSONStorage(storagePath);
+
+// Add objects to the storage
+Item item1 = new Item("Item 1");
+User user1 = new User("User 1");
+Inventory inventory1 = new Inventory(user1.Id, item1.Id);
+storage.New(item1);
+storage.New(user1);
+storage.New(inventory1);
+
+// Save the objects to JSON file
+storage.Save();
+
+// Load objects from the JSON file
+storage.Load();
+
+// Access the objects
+Dictionary<string, object> objects = storage.All();
+foreach (var obj in objects.Values)
+{
+    // Perform operations with the objects
+}
